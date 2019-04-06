@@ -3,13 +3,26 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {}
-
+  
+  state = {
+    styles:{
+        backgroundColor: null
+    }      
+  }
+  
   /**
    * Use this function only. Do not write additional class functions
    */
   changeBackgroundColor = () => {
     /**Your Code goes here */
+    this.setState({
+      styles:{
+        backgroundColor: "#eb5202"
+      }
+    })
+    
+    //console.log(this.state);
+
   }
 
   
@@ -17,9 +30,8 @@ class App extends Component {
     const { changeBackgroundColor } = this;
 
     /** You can use this styles object to add custom styles, will be treated as inline styles in React */
-    const styles = {
-      backgroundColor: null
-    }
+    const styles = this.state.styles;
+    
 
     /** Do NOT change the code below */
     return (
